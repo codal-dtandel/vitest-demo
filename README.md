@@ -13,6 +13,21 @@ pnpm dev
 # or
 bun dev
 ```
+<hr>
+<br>
+
+To run test cases:
+
+```bash
+npm run test
+
+# for coverage
+npm run -- --coverage
+
+# for coverage with UI
+
+npm run -- --coverage --ui
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
