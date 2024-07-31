@@ -1,9 +1,9 @@
 'use client';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { useState } from 'react';
-// import IntlTelInput from 'react-intl-tel-input';
+import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
-const IntlTelInput = dynamic(() => import('react-intl-tel-input'), {});
+// const IntlTelInput = dynamic(() => import('react-intl-tel-input'), {});
 
 const Input = () => {
 
@@ -42,11 +42,10 @@ const Input = () => {
                         errorBagLocal['phone'] = "";
                     }
                     phone = formatMobileNumber(phone);
-                    setPhone("");
+                    setPhone(phone);
                     setCode(country.dialCode);
-                    setFormattedPhoneNumber("");
+                    setFormattedPhoneNumber(formattedPhoneNumber);
                     setErrorBag(errorBagLocal);
-                    // setResponseErrors("");
                 }}
                 onPhoneNumberChange={(isValid, phone, country, formattedPhoneNumber) => {
 
@@ -71,7 +70,6 @@ const Input = () => {
             />
             <div className="form-list">
                 <span className="text-danger" dangerouslySetInnerHTML={{ __html: errorBag.phone }} />
-                <span className="text-danger" dangerouslySetInnerHTML={{ __html: errorBag.code }} />
             </div>
         </>
     );

@@ -22,11 +22,18 @@ To run test cases:
 npm run test
 
 # for coverage
-npm run -- --coverage
+npm run test -- --coverage
 
 # for coverage with UI
 
-npm run -- --coverage --ui
+npm run test -- --coverage --ui
+
+# if got error in running UI
+
+
+npm run test --ui --api 9527 # 9527 is port which you can specify according to you
+
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
